@@ -98,10 +98,10 @@ class Convert:
         try:
             img = Image.open(pic_file)
             #   Example name would be 1990_08_01.jpg if path variable in collect_photos() is 1990\\08. The last number is random to keep filenames unique.
-            name = f"{self.file_name_date}_{str(randint(0, 1000))}.{self.to_extension}"
+            name = f"{self.file_name_date}_{str(randint(0, 10000))}.{self.to_extension}"
             save_path = pic_file.with_name(name)
             while save_path.is_file():
-                name = f"{self.file_name_date}_{str(randint(0, 1000))}.{self.to_extension}"
+                name = f"{self.file_name_date}_{str(randint(0, 10000))}.{self.to_extension}"
                 save_path = pic_file.with_name(name)
             #   see: https://pillow.readthedocs.io/en/3.1.x/handbook/image-file-formats.html#fully-supported-formats.
             if self.to_extension == "png":
