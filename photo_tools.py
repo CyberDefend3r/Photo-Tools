@@ -217,15 +217,17 @@ def main():
                         help="Pass argument to change the exif date in image metadata.")
     args = parser.parse_args()
     pictures_folder = str(args.pictures_folder)
-    if args.to_extension not in ["jpg", "png"]:
-        parser.error("The script only supports conversion to jpg and png image format.")
     if args.convert_image_and_date or (args.change_exif and args.convert_image):
+        if args.to_extension not in ["jpg", "png"]:
+            parser.error("The script only supports conversion to jpg and png image format.")
         convert_img = Convert(from_extension=args.from_extension, to_extension=args.to_extension, change_exif=True, pictures_folder=Path(pictures_folder))
         convert_img.convert_photo()
     elif args.change_exif:
         change_date = DateChange(from_extension=args.from_extension, pictures_folder=Path(pictures_folder))
         change_date.mod_exif_date()
     elif args.convert_image:
+        if args.to_extension not in ["jpg", "png"]:
+            parser.error("The script only supports conversion to jpg and png image format.")
         convert_img = Convert(from_extension=args.from_extension, to_extension=args.to_extension, change_exif=False, pictures_folder=Path(pictures_folder))
         convert_img.convert_photo()
     else:
