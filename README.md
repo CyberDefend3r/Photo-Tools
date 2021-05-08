@@ -41,9 +41,7 @@ convert_img.convert_photo()
 ```
 photo_tools.py [-h] -fe FROM_EXTENSION [-te TO_EXTENSION] [-pf PICTURES_FOLDER] [-ce] [-ci] [-cid]
 
-Used to convert image format or change exif date in image metadata or do both.
-
-optional arguments:
+Arguments:
   -h, --help            
                         show this help message and exit
   -fe, --from_extension
