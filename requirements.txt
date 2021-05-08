@@ -1,0 +1,4 @@
+pyexiftool
+Pillow
+tqdm
+colorama
