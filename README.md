@@ -1,7 +1,7 @@
 # Photo Tools
 Used to automatically convert image format or change exif date in image metadata or do both.  
   
-**The script assumes that exiftool.exe is in the root level of your pictures folder.** https://exiftool.org *(the pyexiftool library is just a wrapper for this executable)*  
+**The script assumes that exiftool.exe is in the root level of your pictures folder.** https://exiftool.org *(the exiftool.py library is just a wrapper for this executable)*  
 
 My scanner (Epson FastFoto FF-680W) only supported TIFF and JPEG and the JPEG compression was terrible and not adjustable. JPEG even looked bad at 1200x1200 dpi. So if you scanned all of your photos in Tiff format and found out the hard way that google photos doesn't support .tif files, like I did. Then use this to convert to any other format and change the appropriate file/image dates. The script can be used to change the EXIF dates to the dates in the folder structure. Example: /pictures/1990/08/photo.tif > 1990:08:01 00:01:01 (August 01, 1990 12:01:01am)  
 
