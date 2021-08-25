@@ -1,4 +1,6 @@
 # Photo Tools
+**Not Maintained:** *Code is not the best it was a project from when I was first learning python*  
+  
 Used to automatically convert image format or change exif date in image metadata or do both.  
   
 **The script assumes that exiftool.exe is in the root level of your pictures folder.** https://exiftool.org *(the exiftool.py library is just a wrapper for this executable. I modified this but credit goes to https://github.com/smarnach/pyexiftool)*  
